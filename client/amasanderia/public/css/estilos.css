@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sansita+Swashed:wght@500&display=swap');
+
+:root {
+    --cafe: #923924;
+    --amarillo: #D5861C;
+    --blanco: #ECE8E3;
+    --verde: #80856A;
+}
+
+/* home */
+.card-hover {
+    transition: 0.5s;
+}
+
+.card-hover:hover {
+    transform: scale(1.01);
+}
+
+.card-hover-blur {
+    transition: .4s;
+}
+
+.card-hover-blur:hover {
+    filter: blur(4px);
+}
+
+.img-home {
+    height: 250px;
+}
+
+.font-sansita {
+    font-family: 'Sansita Swashed',
+        cursive;
+}
+
+.font-lobster {
+    font-family: 'Lobster',
+        cursive;
+}
+
+/* SD */
+.hover-scale-sm {
+    transition: .5s;
+}
+
+.hover-scale-sm:hover {
+    transform: scale(1.02);
+}
+
+/* MD */
+.hover-scale-md {
+    transition: .5s;
+}
+
+.hover-scale-md:hover {
+    transform: scale(1.05);
+}
+
+/* LG */
+.hover-scale-lg {
+    transition: .5s;
+}
+
+.hover-scale-lg:hover {
+    transform: scale(1.1);
+}
+
+/* XL */
+.hover-scale-xl {
+    transition: .5s;
+}
+
+.hover-scale-xl:hover {
+    transform: scale(1.2);
+}
