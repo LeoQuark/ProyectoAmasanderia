@@ -16,11 +16,11 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-orange-800">
         <div className="container">
           <div className="row pl-2">
-            <Link to="/">
-              {/* img */}
-              <a className="navbar-brand text-decoration-none text-capitalize mx-2 pl-3">
+            <Link to="/" className="d-inline-flex">
+              <img src="/img/logo.png" className="img-logo" alt="" />
+              {/* <a className="navbar-brand text-decoration-none text-capitalize mx-2 pl-3">
                 <p className="text-yellow-300 text-2xl xl:text-3xl font-sansita">Amasanderia</p>
-              </a>
+              </a> */}
             </Link>
           </div>
           <button
@@ -32,7 +32,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Menu"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon  "></span>
           </button>
           <div
             className="navbar-collapse justify-content-end collapse"
@@ -42,27 +42,27 @@ const Header = () => {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link to="/" className="nav-link mx-2">
-                    <p className="text-yellow-300 text-lg font-sansita">Home</p>
+                    <p className="text-yellow-300 text-lg font-sansita hover:bg-orange-900 rounded px-1 py-1">Home</p>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/biblioteca" className="nav-link text-white mx-2">
-                    <p className="text-yellow-300 text-lg font-sansita">Productos</p>
+                  <Link to="/productos" className="nav-link text-white mx-2">
+                    <p className="text-yellow-300 text-lg font-sansita hover:bg-orange-900 rounded px-1 py-1">Productos</p>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/contacto" className="nav-link text-white mx-2">
-                    <p className="text-yellow-300 text-lg font-sansita">Contacto</p>
+                    <p className="text-yellow-300 text-lg font-sansita hover:bg-orange-900 rounded px-1 py-1">Contacto</p>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-2">
-                    <p className="text-yellow-300 text-lg font-sansita">Conócenos</p>
+                  <Link to="/nosotros" className="nav-link text-white mx-2">
+                    <p className="text-yellow-300 text-lg font-sansita hover:bg-orange-900 rounded px-1 py-1">Conócenos</p>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-2">
-                    <p className="text-yellow-300 text-lg font-sansita">Carrito
+                  <Link to="carrito" className="nav-link text-white mx-2">
+                    <p className="text-yellow-300 text-lg font-sansita hover:bg-orange-900 rounded px-1 py-1">Carrito
                     <span className="badge bg-yellow-100 text-yellow-800 mx-2">2</span></p>
                     {/* bagde debe cambiar de acuerdo a la cantidad de elementos del carrito */}
                   </Link>

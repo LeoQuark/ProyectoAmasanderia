@@ -12,7 +12,7 @@ const HomeCategorias = () => {
                 <div className="row row-cols-lg-3 row-cols-sm-2 row-cols-1">
                     <div className="col rounded my-lg-3 my-2">
                         <div className="card text-white hover-scale-sm">
-                            <img src="/img/pan.jpg" class="card-img img-home " alt="..." />
+                            <img src="/img/pan.jpg" class="card-img img-home" alt="..." />
                             <div className="card-img-overlay">
                                 <div className="pt-5">
                                     <h2 className="card-title text-5xl sm:text-4xl xl:text-5xl text-center pt-5 font-weight-bold">Panadería</h2>

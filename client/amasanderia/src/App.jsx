@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Contacto from "./components/Contacto";
+import Productos from "./components/Productos";
 
 
 function App() {
@@ -13,6 +15,16 @@ function App() {
         <Route path="/" exact>
           <Header />
           <Home />
+          <Footer />
+        </Route>
+        <Route path="/contacto">
+          <Header />
+          <Contacto />
+          <Footer />
+        </Route>
+        <Route path="/productos">
+          <Header />
+          <Productos />
           <Footer />
         </Route>
       </Switch>

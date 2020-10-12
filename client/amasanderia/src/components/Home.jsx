@@ -7,10 +7,10 @@ import HomeCategorias from './home/HomeCategorias'
 const Intro = () => {
 
     return (
-        <div className="pt-5 mt-2">
-            <div className="container mt-5">
+        <div className="pt-5 mt-2 content">
+            <div className="container-fluid mt-5">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-12 col-lg-5 mx-1 py-5 border rounded shadow">
+                    <div className="col-12 col-lg-5 mx-1 py-5">
                         <div className="align-items-center py-5">
                             <p className="text-5xl md:text-6xl text-center font-lobster hover-scale-xl pt-5 pb-3">Benito & Sofia</p>
                             <p className="text-center font-mono">amasandería - pastelería - almacén</p>
@@ -20,7 +20,7 @@ const Intro = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-5 mx-1 border rounded shadow">
+                    <div className="col-lg-5 mx-1">
                         <HomeCarrusel />
                     </div>
                 </div>

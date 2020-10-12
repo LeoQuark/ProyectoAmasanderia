@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sansita+Swashed:wght@500&display=swap');
-
+/* 
 :root {
     --cafe: #923924;
     --amarillo: #D5861C;
     --blanco: #ECE8E3;
     --verde: #80856A;
+} */
+
+/* LOGO */
+.img-logo {
+    width: 16.2rem;
+    height: 4.3rem;
+}
+
+.bg-cafe {
+    background: #422918;
 }
 
 /* home */
@@ -72,4 +82,84 @@
 
 .hover-scale-xl:hover {
     transform: scale(1.2);
+}
+
+
+/* ANIMACIONES */
+.slider-lr {
+    /* animation: tiempo-animacion, fluides, tiempo-despues del load de windows, repeticiones, funcion */
+    animation: 1s ease-in-out 0s 1 sliderLeftToRight;
+}
+
+.slider-rl {
+    animation: 1s ease-in-out 0s 1 sliderRightToLeft;
+}
+
+.slider-updown {
+    animation: 1s ease-in-out 0s 1 sliderUpToDown;
+}
+
+.opacity-animation {
+    animation: 1.5s ease-in-out 0s 1 imgOpacity;
+}
+
+@keyframes Opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sliderLeftToRight {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-10%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderUpToDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
