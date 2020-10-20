@@ -22,6 +22,11 @@ function App() {
           <Contacto />
           <Footer />
         </Route>
+        <Route path="/producto/:id">
+          <Header />
+
+          <Footer />
+        </Route>
         <Route path="/productos">
           <Header />
           <Productos />

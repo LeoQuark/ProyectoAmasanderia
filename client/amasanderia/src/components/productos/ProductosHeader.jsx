@@ -4,26 +4,51 @@ import ProductosHome from './ProductosHome'
 const ProductosHeader = () => {
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pt-1">
             <div className="d-flex justify-content-start">
-                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                <ul className="nav  whitespace-no-wrap overflow-x-scroll overflow-y-hidden md:whitespace-normal md:overflow-x-hidden " id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ofertas</a>
+                        <a className="nav-link active" id="oferta-tab" data-toggle="tab" href="#oferta" role="tab" aria-controls="ofertas" aria-selected="true">Ofertas</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        <a className="nav-link" id="panaderia-tab" data-toggle="tab" href="#panaderia" role="tab" aria-controls="profile" aria-selected="false">Panadería</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                        <a className="nav-link" id="empanadas-tab" data-toggle="tab" href="#empanadas" role="tab" aria-controls="contact" aria-selected="false">Empanadas</a>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                        <a className="nav-link" id="pasteleria-tab" data-toggle="tab" href="#pasteleria" role="tab" aria-controls="contact" aria-selected="false">Pastelería</a>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                        <a className="nav-link" id="dulces-tab" data-toggle="tab" href="#dulces" role="tab" aria-controls="contact" aria-selected="false">Masas dulces</a>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                        <a className="nav-link" id="almacen-tab" data-toggle="tab" href="#almacen" role="tab" aria-controls="contact" aria-selected="false">Almacen</a>
                     </li>
                 </ul>
             </div>
             <div className="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <ProductosHome />
+                <div class="tab-pane fade show active" id="oferta" role="tabpanel" aria-labelledby="oferta-tab">
+                    <ProductosHome titulo={'oferta'} />
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">fdfd</div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">ss</div>
+                <div class="tab-pane fade" id="panaderia" role="tabpanel" aria-labelledby="panaderia-tab">
+                    <ProductosHome titulo={'panadería'} />
+                </div>
+                <div class="tab-pane fade" id="empanadas" role="tabpanel" aria-labelledby="empanadas-tab">
+                    <ProductosHome titulo={'empanadas'} />
+                </div>
+                <div class="tab-pane fade" id="panaderia" role="tabpanel" aria-labelledby="panaderia-tab">
+                    <ProductosHome titulo={'panadería'} />
+                </div>
+                <div class="tab-pane fade" id="pasteleria" role="tabpanel" aria-labelledby="pasteleria-tab">
+                    <ProductosHome titulo={'pastelería'} />
+                </div>
+                <div class="tab-pane fade" id="dulces" role="tabpanel" aria-labelledby="dulces-tab">
+                    <ProductosHome titulo={'dulces'} />
+                </div>
+                <div class="tab-pane fade" id="almacen" role="tabpanel" aria-labelledby="almacen-tab">
+                    <ProductosHome titulo={'almacen'} />
+                </div>
             </div>
         </div>
     );
