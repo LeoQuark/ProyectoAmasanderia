@@ -13,7 +13,7 @@ const Header = () => {
           </div>
         </div>
       </div> */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-orange-900">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-cafec">
         <div className="container">
           <div className="row pl-2">
             <Link to="/" className="d-inline-flex">
