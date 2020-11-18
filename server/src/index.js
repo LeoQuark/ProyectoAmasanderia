@@ -1,20 +1,10 @@
-import express, { json } from "express";
-import morgan from "morgan";
+import app from './app';
 
-// inicializo express
-const app = express();
+async function main() {
+  // configuracion del puerto
+  const port = process.env.port || 4000;
+  await app.listen(port);
+  console.log(`Running on port: ${port}`)
+}
 
-// middlewares
-app.use(morgan("dev"));
-app.use(json());
-
-// rutas
-
-// app.use()
-
-// configuracion del puerto
-const port = process.env.port || 4000;
-
-app.listen(port, () => {
-  console.log(`Running on port: ${port}`);
-});
+main();
