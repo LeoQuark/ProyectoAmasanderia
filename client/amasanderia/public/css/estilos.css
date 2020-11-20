@@ -16,11 +16,12 @@
 .bg-cafe {
     background: #422918;
 }
-.bg-cafec{
+
+.bg-cafec {
     background: #B16117;
 }
 
-.bg-cafeo{
+.bg-cafeo {
     background: #CB7321;
 }
 
@@ -54,6 +55,14 @@
 .font-lobster {
     font-family: 'Lobster',
         cursive;
+}
+
+
+/* CONTACTO */
+
+.img-contacto {
+    width: 60em;
+    height: 20em;
 }
 
 /* SD */
@@ -113,6 +122,10 @@
 @keyframes Opacity {
     0% {
         opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
     }
 
     100% {

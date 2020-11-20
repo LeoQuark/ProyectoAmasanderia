@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Contacto from "./components/Contacto";
 import Productos from "./components/Productos";
+import Conocenos from "./components/Conocenos";
 
 
 function App() {
@@ -17,11 +18,6 @@ function App() {
           <Home />
           <Footer />
         </Route>
-        <Route path="/contacto">
-          <Header />
-          <Contacto />
-          <Footer />
-        </Route>
         <Route path="/producto/:id">
           <Header />
 
@@ -30,6 +26,16 @@ function App() {
         <Route path="/productos">
           <Header />
           <Productos />
+          <Footer />
+        </Route>
+        <Route path="/contacto">
+          <Header />
+          <Contacto />
+          <Footer />
+        </Route>
+        <Route path="/conocenos">
+          <Header />
+          <Conocenos />
           <Footer />
         </Route>
       </Switch>

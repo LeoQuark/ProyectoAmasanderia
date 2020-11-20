@@ -1,16 +1,18 @@
 import React from 'react'
 import ContactoForm from './contacto/ContactoForm'
+import ContactoTexto from './contacto/ContactoTexto'
 
 const Contacto = () => {
 
     return (
-        <div className="container-fluid mt-5 pt-5">
-            <div className="row d-flex justify-content-center bg-cafeo">
-                <p className="text-5xl md:text-6xl font-sansita">¡Contáctanos!</p>
+        <div className="container-fluid bg-cafeo mt-5 py-5">
+            <div className="row d-flex justify-content-center my-2 pt-1">
+                <div className="mx-2">
+                    <img src="/img/foto-contacto.jpg" className="rounded-lg img-contacto" />
+                </div>
             </div>
-            <div className="container-fluid">
-                <ContactoForm />
-            </div>
+            <ContactoTexto />
+            <ContactoForm />
         </div>
     );
 }
