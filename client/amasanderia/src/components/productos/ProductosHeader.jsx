@@ -6,7 +6,7 @@ const ProductosHeader = () => {
     return (
         <div className="container-fluid ">
             <div className="d-flex justify-content-center bg-cafeo">
-                <ul className="nav text-yellow-300 whitespace-no-wrap overflow-x-scroll overflow-y-hidden md:whitespace-normal md:overflow-x-hidden " id="myTab" role="tablist">
+                <ul className="nav " id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
                         <a className="nav-link active" id="oferta-tab" data-toggle="tab" href="#oferta" role="tab" aria-controls="ofertas" aria-selected="true">Ofertas</a>
                     </li>
@@ -49,8 +49,8 @@ const ProductosHeader = () => {
                 <div class="tab-pane fade" id="almacen" role="tabpanel" aria-labelledby="almacen-tab">
                     <ProductosHome titulo={'almacen'} />
                 </div>
-                </div>
             </div>
+        </div>
     );
 }
 

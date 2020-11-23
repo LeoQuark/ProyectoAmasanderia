@@ -24,7 +24,7 @@ const ProductosHome = (props) => {
     return (
         <div className="container-fluid my-2 pt-3">
             <div className="row d-flex justify-content-start">
-                <p className="font-weight-bold text-capitalize text-xl sm:text-2xl">{props.titulo}</p>
+                <p className="font-weight-bold">{props.titulo}</p>
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <div className="px-2">

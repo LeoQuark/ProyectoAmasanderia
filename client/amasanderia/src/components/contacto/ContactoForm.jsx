@@ -7,7 +7,7 @@ const ContactoForm = () => {
         <div className="container bg-white rounded shadow py-3">
             <div className="row d-flex justify-content-center">
                 <div className="col">
-                    <h2 className="text-center text-4xl font-weight-bold py-4">Contáctanos</h2>
+                    <h2 className="text-center font-weight-bold py-4">Contáctanos</h2>
                     <hr />
                 </div>
             </div>
@@ -15,20 +15,20 @@ const ContactoForm = () => {
                 <div className="col-12 col-md-5 px-2">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti modi cupiditate sed placeat, voluptatibus harum obcaecati inventore hic aspernatur explicabo mollitia, amet, maxime velit impedit non commodi natus iure magni cumque.</p>
                     <div className="d-flex justify-content-center py-5 opacity-animation">
-                        <ul className="d-inline-flex">
+                        <ul className="d-inline-flex list-style-none">
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-facebook-f fa-3x text-blue-600 mx-4 hover-scale-lg"></i>
+                                    <i class="fab fa-facebook-f fa-3x  mx-4 hover-scale-lg"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-instagram fa-3x text-pink-600 mx-4 hover-scale-lg"></i>
+                                    <i class="fab fa-instagram fa-3x mx-4 hover-scale-lg"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-twitter fa-3x text-blue-400 mx-4 hover-scale-lg"></i>
+                                    <i class="fab fa-twitter fa-3x mx-4 hover-scale-lg"></i>
                                 </a>
                             </li>
                         </ul>
@@ -43,7 +43,7 @@ const ContactoForm = () => {
                         <div className="row my-1">
                             <label htmlFor="email">Email</label>
                             <input type="email" className="form-control" name="email" placeholder="Ingrese su correo electrónico" />
-                            <p className="text-gray-600 text-xs sm:text-sm">* Tu email está seguro con nosotros <span><i class="far fa-smile-wink"></i></span></p>
+                            <p className="">* Tu email está seguro con nosotros <span><i class="far fa-smile-wink"></i></span></p>
                         </div>
                         <div className="row my-1">
                             <label htmlFor="mensaje">Mensaje</label>

@@ -12,8 +12,8 @@ const Intro = () => {
                 <div className="row d-flex justify-content-center">
                     <div className="col-12 col-lg-5 mx-1 py-5">
                         <div className="align-items-center py-5">
-                            <p className="text-5xl md:text-6xl text-center font-lobster hover-scale-xl pt-5 pb-3">Benito & Sofia</p>
-                            <p className="text-center font-mono">amasandería - pastelería - almacén</p>
+                            <p className="text-center hover-scale-xl pt-5 pb-3">Benito & Sofia</p>
+                            <p className="text-center">amasandería - pastelería - almacén</p>
                             <div className="d-flex justify-content-center pt-5">
                                 <button className="btn btn-primary  mx-3">Ver Productos</button>
                                 <button className="btn btn-outline-primary btn-lg mx-3">Conócenos</button>

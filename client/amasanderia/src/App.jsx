@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Contacto from "./components/Contacto";
 import Productos from "./components/Productos";
 import Conocenos from "./components/Conocenos";
+import Login from "./components/login/Login";
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           <Header />
           <Home />
           <Footer />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/producto/:id">
           <Header />

@@ -1,16 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sansita+Swashed:wght@500&display=swap');
-/* 
+
+
 :root {
-    --cafe: #923924;
-    --amarillo: #D5861C;
-    --blanco: #ECE8E3;
-    --verde: #80856A;
-} */
+    --amarillo: #FFC83C;
+    --twitter: #3AB8E0;
+    --facebook: #4A66F6;
+    --instagram: #F64A9D;
+}
+
+/* TAMAÑOS DE LETRAS */
+
+/* COLORES DE LETRAS */
+
+.text-amarillo {
+    color: var(--amarillo);
+}
+
+.text-twitter {
+    color: var(--twitter);
+}
+
+.text-facebook {
+    color: var(--facebook);
+}
+
+.text-instagram {
+    color: var(--instagram);
+}
 
 /* LOGO */
 .img-logo {
     width: 16.2rem;
     height: 4.3rem;
+}
+
+.list-style-none {
+    list-style: none;
 }
 
 .bg-cafe {
