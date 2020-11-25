@@ -8,6 +8,7 @@ import Contacto from "./components/Contacto";
 import Productos from "./components/Productos";
 import Conocenos from "./components/Conocenos";
 import Login from "./components/login/Login";
+import ProductoSelected from "./components/productos/ProductoSelected";
 
 
 function App() {
@@ -22,16 +23,6 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/producto/:id">
-          <Header />
-
-          <Footer />
-        </Route>
-        <Route path="/productos">
-          <Header />
-          <Productos />
-          <Footer />
-        </Route>
         <Route path="/contacto">
           <Header />
           <Contacto />
@@ -40,6 +31,16 @@ function App() {
         <Route path="/conocenos">
           <Header />
           <Conocenos />
+          <Footer />
+        </Route>
+        <Route path="/productos/:id">
+          <Header />
+          <ProductoSelected />
+          <Footer />
+        </Route>
+        <Route path="/productos">
+          <Header />
+          <Productos />
           <Footer />
         </Route>
       </Switch>
