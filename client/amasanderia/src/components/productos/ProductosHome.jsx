@@ -2,42 +2,36 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import Cargando from '../Cargando';
 import ProductosCard from './ProductosCard';
+import ProductosHeader from './ProductosHeader';
 
 const ProductosHome = (props) => {
-    const { id } = useParams()
+    const titulo = props.titulo;
     const [cargando, setCargando] = useState(<Cargando />)
 
-    // useEffect(() => {
-    //     const getAves = async () => {
-    //         try {
-    //             const res = await fetch('https://aves.ninjas.cl/api/birds')
-    //             const datos = await res.json()
-    //             // a setState se le puede pasar html,objetos,js,array,etc
-    //             //con aves={} se utiliza los props, que pasa los datos de la API
-    //             setCargando(<Aves aves={datos}></Aves>)
-    //         } catch (e) {
-    //             console.log(e)
-    //         }
-    //     }
-    //     getAves()
-    // }, [])
+    useEffect(() => {
+        const getProductos = async () => {
+            try {
+                const res = await fetch(`http://localhost:4000/api/productos/get-all`);
+                const datos = await res.json();
+                setCargando(<ProductosCard productos={datos}></ProductosCard>);
+                console.log(datos);
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        getProductos();
+
+        // el renderizado se hará solo una vez pues le pasamos el argumento vacio '[]'
+    }, []);
+
     return (
         <div className="container-fluid my-2 pt-3">
-            <div className="row d-flex justify-content-start">
-                <p className="font-weight-bold">{props.titulo}</p>
-            </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <div className="px-2">
-                    <ProductosCard />
+            <div className="container">
+                <div className="d-flex justify-content-start">
+                    <h4 className="font-weight-bold text-dark">{titulo}</h4>
                 </div>
-                <div className="px-2">
-                    <ProductosCard />
-                </div>
-                <div className="px-2">
-                    <ProductosCard />
-                </div>
-                <div className="px-2">
-                    <ProductosCard />
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    {cargando}
                 </div>
             </div>
         </div>

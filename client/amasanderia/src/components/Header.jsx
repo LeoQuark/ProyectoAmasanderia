@@ -24,7 +24,7 @@ const Header = () => {
             </Link>
           </div>
           <button className="navbar-toggler rounded shadow-lg" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
-            <span className=""><i class="fas fa-bars fa-2x"></i></span>
+            <span className=""><i className="fas fa-bars fa-2x"></i></span>
           </button>
           <div className="navbar-collapse justify-content-end collapse" id="navbar">
             <div className="row d-flex">
