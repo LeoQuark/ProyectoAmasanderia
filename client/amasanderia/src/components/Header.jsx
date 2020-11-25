@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="conatainer-fluid fixed-top">
+    <div className="conatainer-fluid fixed-top ">
       {/* <div className="container-fluid bg-orange-800 pt-1">
         <div className="row d-flex justify-content-end">
           <div className="col-auto ">
@@ -13,7 +13,7 @@ const Header = () => {
           </div>
         </div>
       </div> */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-cafec">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-cafec ">
         <div className="container">
           <div className="row pl-2">
             <Link to="/" className="d-inline-flex">
