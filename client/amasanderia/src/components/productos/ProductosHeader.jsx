@@ -6,7 +6,7 @@ const ProductosHeader = () => {
     return (
         <div className="container-fluid ">
             <div className="d-flex rounded-bottom justify-content-center bg-cafeo">
-                <ul className="nav " id="myTab" role="tablist">
+                <ul className="nav" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
                         <a className="nav-link active font-producto" id="oferta-tab" data-toggle="tab" href="#oferta" role="tab" aria-controls="ofertas" aria-selected="true">Ofertas</a>
                     </li>

@@ -1,4 +1,3 @@
-
 import Pool from './index'
 
 // status(200) = solicitud exitosa
@@ -40,8 +39,8 @@ const getClientes = async (req, res) => {
 
 const getClienteById = async (req, res) => {
     try {
-        const id = req.params.id
-        const consulta = await Pool.query('SELECT * FROM cliente WHERE id = $1', [id])
+        const id_cliente = req.params.id_cliente
+        const consulta = await Pool.query('SELECT * FROM cliente WHERE id_cliente = $1', [id_cliente])
         console.log(consulta.rows)
         res.json({
             data: consulta.rows,
@@ -58,8 +57,8 @@ const getClienteById = async (req, res) => {
 
 const deleteCliente = async (req, res) => {
     try {
-        const id = req.params.id
-        const consulta = await Pool.query('DELETE FROM cliente WHERE id = $1', [id])
+        const id_cliente = req.params.id_cliente
+        const consulta = await Pool.query('DELETE FROM cliente WHERE id_cliente = $1', [id_cliente])
         console.log(`cliente con id ${id} eliminado`)
         res.json({
             message: `cliente eliminado`,
@@ -76,9 +75,9 @@ const deleteCliente = async (req, res) => {
 
 const updateCliente = async (req, res) => {
     try {
-        const id = req.params.id
+        const id_cliente = req.params.id_cliente
         const { nombre, correo, direccion, comuna, telefono } = req.body
-        const consulta = Pool.query('UPDATE cliente SET nombre = $1, correo = $2, direccion = $3, comuna = $4, telefono = $5 WHERE id = $6', [nombre, correo, direccion, comuna, telefono])
+        const consulta = Pool.query('UPDATE cliente SET nombre = $1, correo = $2, direccion = $3, comuna = $4, telefono = $5 WHERE id_cliente = $6', [nombre, correo, direccion, comuna, telefono, id_cliente])
         console.log(consulta)
         res.json({
             message: `cliente actualizado`,

@@ -1,13 +1,13 @@
 import Pool from './index'
 
 // status(200) = solicitud exitosa
-const createProducto = async (req, res) => {
+const createVenta = async (req, res) => {
     try {
-        const { nombre, categoria, descripcion, precio, disponible, imagen } = req.body;
-        const consulta = await Pool.query('INSERT INTO producto (nombre,categoria,descripcion,precio,disponible,imagen) VALUES ($1, $2, $3, $4, $5, $6)', [nombre, categoria, descripcion, precio, disponible, imagen]);
-        console.log(consulta)
+        const { fecha, id_tipo_pago, id_cliente } = req.body;
+        const consulta = await Pool.query('INSERT INTO compra (fecha, id_tipo_pago, id_cliente) VALUES ($1, $2, $3)', [fecha, id_tipo_pago, id_cliente]);
+        // console.log(consulta)
         res.json({
-            message: `producto: ${nombre} creado exitosamente`
+            message: `venta: ${fecha} creado exitosamente`
         })
     } catch (err) {
         console.log(err)
@@ -17,10 +17,10 @@ const createProducto = async (req, res) => {
     }
 }
 
-const getProductos = async (req, res) => {
+const getVentas = async (req, res) => {
     try {
-        const consulta = await Pool.query('SELECT * FROM producto');
-        console.log(consulta.rows)
+        const consulta = await Pool.query('SELECT * FROM compra');
+        // console.log(consulta.rows)
         res.status(200).json(consulta.rows)
     } catch (err) {
         console.log(err)
@@ -30,11 +30,11 @@ const getProductos = async (req, res) => {
     }
 }
 
-const getProductoById = async (req, res) => {
+const getVentaById = async (req, res) => {
     try {
-        const id = req.params.id
-        const consulta = await Pool.query('SELECT * FROM producto WHERE id = $1', [id])
-        console.log(consulta.rows)
+        const id_compra = req.params.id_compra
+        const consulta = await Pool.query('SELECT * FROM compra WHERE id_compra = $1', [id_compra])
+        // console.log(consulta.rows)
         res.json(consulta.rows)
     } catch (err) {
         console.log(err)
@@ -44,13 +44,13 @@ const getProductoById = async (req, res) => {
     }
 }
 
-const deleteProducto = async (req, res) => {
+const deleteVenta = async (req, res) => {
     try {
-        const id = req.params.id
-        const consulta = await Pool.query('DELETE FROM producto WHERE id = $1', [id])
-        console.log(`producto con id ${id} eliminado`)
+        const id_compra = req.params.id_compra
+        const consulta = await Pool.query('DELETE FROM compra WHERE id_compra = $1', [id_compra])
+        console.log(`compra con id ${id} eliminado`)
         res.json({
-            message: `producto eliminado`
+            message: `compra eliminado`
         })
     } catch (err) {
         console.log(err)
@@ -60,14 +60,14 @@ const deleteProducto = async (req, res) => {
     }
 }
 
-const updateProducto = async (req, res) => {
+const updateVenta = async (req, res) => {
     try {
-        const id = req.params.id
-        const { nombre, categoria, descripcion, precio, disponible } = req.body
-        const consulta = Pool.query('UPDATE producto SET nombre = $1, categoria = $2, descripcion = $3, precio = $4, disponiblle = $5 WHERE id = $6', [nombre, categoria, descripcion, precio, disponible, id])
+        const id_compra = req.params.id_compra
+        const { fecha, id_tipo_pago, id_cliente } = req.body
+        const consulta = Pool.query('UPDATE compra SET fecha = $1, id_tipo_pago = $2, id_cliente = $3 WHERE id = $3', [fecha, id_tipo_pago, id_cliente, id_compra])
         console.log(consulta)
         res.json({
-            message: `producto actualizado`,
+            message: `venta actualizada`,
             data: consulta.rows
         })
     } catch (err) {
@@ -79,9 +79,9 @@ const updateProducto = async (req, res) => {
 }
 
 module.exports = {
-    createProducto,
-    getProductos,
-    getProductoById,
-    deleteProducto,
-    updateProducto
+    createVenta,
+    getVentas,
+    getVentaById,
+    deleteVenta,
+    updateVenta
 }

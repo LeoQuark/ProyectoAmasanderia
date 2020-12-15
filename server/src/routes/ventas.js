@@ -1,12 +1,12 @@
 import { Router } from "express";
 const router = Router();
-import { getUsuarios, createUsuario, getUsuarioById, deleteUsuario, updateUsuario } from '../controllers/usuarioControllers'
+import { getVentas, createVenta, getVentaById, deleteVenta, updateVenta } from '../controllers/ventaControllers'
 
-router.post('/create', createUsuario)
-router.get('/get-all', getUsuarios)
-router.get('/get/:id', getUsuarioById)
-router.delete('/delete/:id', deleteUsuario)
-router.put('/update/:id', updateUsuario)
+router.post('/create', createVenta)
+router.get('/get-all', getVentas)
+router.get('/get/:id', getVentaById)
+router.delete('/delete/:id', deleteVenta)
+router.put('/update/:id', updateVenta)
 
 export default router;
 

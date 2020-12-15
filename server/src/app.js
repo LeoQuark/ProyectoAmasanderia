@@ -3,7 +3,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 
 // import para las rutas
-import usuarioRoutes from "./routes/usuarios";
+import adminRoutes from "./routes/admin";
 import productoRoutes from "./routes/productos";
 import clienteRoutes from "./routes/clientes";
 import ventaRoutes from "./routes/ventas"
@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
 });
 
 // rutas
-app.use('/api/usuarios', usuarioRoutes)
+app.use('/api/admin', adminRoutes)
 app.use('/api/productos', productoRoutes)
 app.use('/api/clientes', clienteRoutes)
 app.use('/api/ventas', ventaRoutes)

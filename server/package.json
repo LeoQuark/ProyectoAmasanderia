@@ -25,6 +25,8 @@
     "pg-hstore": "^2.3.3"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
     "sendmail": "^1.6.1"
   }
 }

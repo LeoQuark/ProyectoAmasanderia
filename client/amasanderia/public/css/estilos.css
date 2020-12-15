@@ -103,14 +103,16 @@
 
 /* Text product home */
 
-.font-producto{
+.font-producto {
     color: white;
 }
-.font-producton{
+
+.font-producton {
     color: black;
 }
-.font-productoc{
-    color:#422918;
+
+.font-productoc {
+    color: #422918;
 }
 
 /* CONTACTO */
@@ -236,5 +238,29 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* LOGIN */
+
+.text-black {
+    color: black;
+}
+
+.btn-carrito {
+    color: gray;
+    transition: .2s;
+}
+
+.btn-carrito:hover {
+    --tw-text-opacity: 1;
+    background: rgba(220, 38, 38, var(--tw-text-opacity));
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .img-card-carrito {
+        width: 10em;
+        height: 10em;
     }
 }

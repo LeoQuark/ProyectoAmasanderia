@@ -9,7 +9,7 @@ const ProductosCard = (props) => {
         <>
             {
                 productos.map((producto, index) => (
-                    <Link to={`/productos/${producto.id}`} className="text-decoration-none text-dark px-2" >
+                    <Link to={`/productos/${producto.id}`} className="text-decoration-none text-dark px-2" key={productos.nombre} >
                         <div className="card bg-white rounded shadow-md px-1 hover-scale-sm my-2 h-card">
                             <div className="row">
                                 <div className="col-12 col-sm-6">

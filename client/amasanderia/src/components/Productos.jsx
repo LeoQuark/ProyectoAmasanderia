@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ProductosHeader from './productos/ProductosHeader'
 
 const Productos = (props) => {
-    useEffect(() => {
-        console.log(props.id)
-    }, [])
-    console.log(props.id)
+    
+
     return (
         <div className="container-fluid  mt-5 text-white ">
             <hr />

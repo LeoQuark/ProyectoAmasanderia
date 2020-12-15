@@ -7,8 +7,11 @@ import Footer from "./components/Footer";
 import Contacto from "./components/Contacto";
 import Productos from "./components/Productos";
 import Conocenos from "./components/Conocenos";
-import Login from "./components/login/Login";
+import Login from "./components/admin/Admin";
 import ProductoSelected from "./components/productos/ProductoSelected";
+import CarritoBody from "./components/carrito/CarritoBody";
+import HeaderAdmin from "./components/admin/HeaderAdmin";
+import PanelAdmin from "./components/admin/PanelAdmin";
 
 
 function App() {
@@ -20,8 +23,15 @@ function App() {
           <Home />
           <Footer />
         </Route>
-        <Route path="/login">
+        <Route path="/admin">
           <Login />
+        </Route>
+        <Route path="/user">
+          <HeaderAdmin />
+        </Route>
+        <Route path="/panel-administrador">
+          <HeaderAdmin />
+          <PanelAdmin />
         </Route>
         <Route path="/contacto">
           <Header />
@@ -41,6 +51,11 @@ function App() {
         <Route path="/productos">
           <Header />
           <Productos />
+          <Footer />
+        </Route>
+        <Route path="/carrito">
+          <Header />
+          <CarritoBody />
           <Footer />
         </Route>
       </Switch>

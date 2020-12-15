@@ -13,8 +13,8 @@ const ProductosHome = (props) => {
             try {
                 const res = await fetch(`http://localhost:4000/api/productos/get-all`);
                 const datos = await res.json();
-                setCargando(<ProductosCard productos={datos}></ProductosCard>);
-                console.log(datos);
+                setCargando(<ProductosCard productos={datos} />);
+                // console.log(datos);
             } catch (err) {
                 console.log(err)
             }
