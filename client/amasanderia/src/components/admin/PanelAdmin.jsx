@@ -43,7 +43,7 @@ function PanelAdmin() {
 
     useEffect(() => {
         getProductos()
-    }, [respuesta])
+    }, [respuesta,getProductos])
 
     return (
         <div className="container-fluid my-5 pt-5">

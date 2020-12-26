@@ -1,39 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
-import EditarOpc from './EditarOpc'
+import BotonEditar from './BotonEditar'
+import BotonEliminar from './BotonEliminar'
+import BotonInfo from './BotonInfo'
 
-function Editar(props)=> {
-
-    return (<Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-    >
-        <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
-        </Modal.Body>
-        <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-          </Button>
-            <Button variant="primary">Understood</Button>
-        </Modal.Footer>
-    </Modal>);
-}
 
 function TablaProductos(props) {
 
     const productos = props.productos.data;
-    // console.table(props.productos.data)
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const editarDatos = (event) => {
+    //     event.preventDefault()
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(datosProductos)
+    //     };
+    //     fetch('http://localhost:4000/api/productos/create', requestOptions)
+    //         .then(response => response.json({
+    //             message: "añadido"
+    //         }))
+    //         .then(() => setRespuesta(!respuesta))
+    // }
 
     useEffect(() => {
 
@@ -63,15 +50,9 @@ function TablaProductos(props) {
                                 <td>{`$ ${producto.precio}`}</td>
                                 <td>
                                     <div className="d-flex">
-                                        <Button variant="white" onClick={handleShow}>
-                                            <i class="fas fa-pencil-alt text-primary"></i>
-                                        </Button>
-                                        <button type="button" className="btn btn-sm btn-white mx-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
-                                            <i class="far fa-trash-alt text-danger"></i>
-                                        </button>
-                                        <button type="button" className="btn btn-sm btn-white mx-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Información">
-                                            <i class="fas fa-info-circle text-secondary"></i>
-                                        </button>
+                                        <BotonEditar producto={producto} />
+                                        <BotonEliminar producto={producto} />
+                                        <BotonInfo producto={producto} />
                                     </div>
                                 </td>
                             </tr>
@@ -79,7 +60,7 @@ function TablaProductos(props) {
                     }
                 </tbody>
             </table>
-        </div >
+        </div>
     );
 }
 
