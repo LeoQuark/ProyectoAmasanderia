@@ -4,26 +4,26 @@ import ProductosHome from './ProductosHome'
 const ProductosHeader = () => {
 
     return (
-        <div className="container-fluid ">
-            <div className="d-flex rounded-bottom justify-content-center bg-cafeo">
+        <div className="container">
+            <div className="d-flex rounded-bottom justify-content-center bg-cafe">
                 <ul className="nav" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link active font-producto" id="oferta-tab" data-toggle="tab" href="#oferta" role="tab" aria-controls="ofertas" aria-selected="true">Ofertas</a>
+                        <a className="nav-link active font-producto b-hover" id="oferta-tab" data-toggle="tab" href="#oferta" role="tab" aria-controls="ofertas" aria-selected="true">Ofertas</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link font-producto" id="panaderia-tab" data-toggle="tab" href="#panaderia" role="tab" aria-controls="profile" aria-selected="false">Panadería</a>
+                        <a className="nav-link font-producto b-hover" id="panaderia-tab" data-toggle="tab" href="#panaderia" role="tab" aria-controls="profile" aria-selected="false">Panadería</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link font-producto" id="empanadas-tab" data-toggle="tab" href="#empanadas" role="tab" aria-controls="contact" aria-selected="false">Empanadas</a>
+                        <a className="nav-link font-producto b-hover" id="empanadas-tab" data-toggle="tab" href="#empanadas" role="tab" aria-controls="contact" aria-selected="false">Empanadas</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link font-producto" id="pasteleria-tab" data-toggle="tab" href="#pasteleria" role="tab" aria-controls="contact" aria-selected="false">Pastelería</a>
+                        <a className="nav-link font-producto b-hover" id="pasteleria-tab" data-toggle="tab" href="#pasteleria" role="tab" aria-controls="contact" aria-selected="false">Pastelería</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link font-producto" id="dulces-tab" data-toggle="tab" href="#dulces" role="tab" aria-controls="contact" aria-selected="false">Masas dulces</a>
+                        <a className="nav-link font-producto b-hover" id="dulces-tab" data-toggle="tab" href="#dulces" role="tab" aria-controls="contact" aria-selected="false">Masas dulces</a>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <a className="nav-link font-producto" id="almacen-tab" data-toggle="tab" href="#almacen" role="tab" aria-controls="contact" aria-selected="false">Almacen</a>
+                        <a className="nav-link font-producto b-hover" id="almacen-tab" data-toggle="tab" href="#almacen" role="tab" aria-controls="contact" aria-selected="false">Almacen</a>
                     </li>
                 </ul>
             </div>

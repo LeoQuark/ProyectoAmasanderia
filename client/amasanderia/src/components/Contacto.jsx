@@ -8,7 +8,7 @@ const Contacto = () => {
         <div className="container-fluid bg-cafeo mt-5 py-5">
             <div className="row d-flex justify-content-center my-2 pt-1">
                 <div className="mx-2">
-                    <img src="/img/foto-contacto.jpg" className="rounded-lg img-contacto" />
+                    <img src="/img/foto-contacto.jpg" className="redondeo img-contacto" />
                 </div>
             </div>
             <ContactoTexto />

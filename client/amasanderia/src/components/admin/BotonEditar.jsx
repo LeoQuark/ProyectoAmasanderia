@@ -29,15 +29,12 @@ function BotonEditar(props) {
                 centered
             >
                 <Modal.Header>
-                    <Modal.Title>{seleccion.nombre}</Modal.Title>
+                    <Modal.Title>Editar información <strong>{seleccion.nombre}</strong></Modal.Title>
                     <Button variant="light" size="sm" onClick={handleClose}>
                         <i class="fas fa-times"></i>
                     </Button>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="d-flex justify-content-center">
-                        <h5>Editar información del producto</h5>
-                    </div>
                     <div className="row d-flex justify-content-center my-1 pt-1">
                         <div className="col">
                             <form action="">
@@ -50,7 +47,7 @@ function BotonEditar(props) {
                                 </div>
                                 <div className="my-1">
                                     <label htmlFor="inputCategoria" className="form-label mx-2">Categoría</label>
-                                    <select name="categoria" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <select name="categoria" class="form-control form-control-sm" aria-label=".form-select-sm example">
                                         <option selected>Selecciona la categoría del producto</option>
                                         <option value="Amasanderia">Amasandería</option>
                                         <option value="Panaderia">Panadería</option>
@@ -60,25 +57,29 @@ function BotonEditar(props) {
                                         <option value="Almacen">Almacén</option>
                                     </select>
                                 </div>
-                                <div className="my-1">
-                                    <label htmlFor="" className="form-label mx-2">Stock</label>
-                                    <input className="form-control form-control-sm"
-                                        value={seleccion.stock}
-                                        name="stock"
-                                    />
-                                </div>
-                                <div className="my-1">
-                                    <label htmlFor="" className="form-label mx-2">Precio</label>
-                                    <input className="form-control form-control-sm"
-                                        value={seleccion.precio}
-                                        name="precio"
-                                    />
+                                <div className="d-flex justify-content-between">
+                                    <div className="my-1">
+                                        <label htmlFor="" className="form-label mx-2">Stock</label>
+                                        <input className="form-control form-control-sm"
+                                            value={seleccion.stock}
+                                            name="stock"
+                                            type="number"
+                                        />
+                                    </div>
+                                    <div className="my-1">
+                                        <label htmlFor="" className="form-label mx-2">Precio</label>
+                                        <input className="form-control form-control-sm"
+                                            value={seleccion.precio}
+                                            name="precio"
+                                            type="number"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="my-1">
                                     <label htmlFor="" className="form-label mx-2">Descripcion</label>
                                     <textarea className="form-control form-control-sm"
                                         value={seleccion.descripcion}
-                                        // placeholder="leo"
+                                        // placeholder={seleccion.descripcion}
                                         name="descripcion"
                                         rows="2"
                                     // onChange={handleInputChange}

@@ -23,6 +23,16 @@ function App() {
           <Home />
           <Footer />
         </Route>
+        <Route path="/productos/:id">
+          <Header />
+          <ProductoSelected />
+          <Footer />
+        </Route>
+        <Route path="/productos">
+          <Header />
+          <Productos />
+          <Footer />
+        </Route>
         <Route path="/admin">
           <Login />
         </Route>
@@ -32,6 +42,7 @@ function App() {
         <Route path="/panel-administrador">
           <HeaderAdmin />
           <PanelAdmin />
+          <Footer />
         </Route>
         <Route path="/contacto">
           <Header />
@@ -41,16 +52,6 @@ function App() {
         <Route path="/conocenos">
           <Header />
           <Conocenos />
-          <Footer />
-        </Route>
-        <Route path="/productos/:id">
-          <Header />
-          <ProductoSelected />
-          <Footer />
-        </Route>
-        <Route path="/productos">
-          <Header />
-          <Productos />
           <Footer />
         </Route>
         <Route path="/carrito">

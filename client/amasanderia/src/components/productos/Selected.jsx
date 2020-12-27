@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-function Selected(props){
+function Selected(props) {
 
     const [carrito, setCarrito] = useState([])
     const producto = props.producto.data[0]
+    console.log(producto)
+
     const [cantidad, setCantidad] = useState(1)
 
-    console.log(JSON.stringify(producto))
-    console.log(producto)
+    // console.log(JSON.stringify(producto))
+    // console.log(producto)
 
     const btnRestar = () => {
         if (cantidad == 1 || cantidad < 1) {
@@ -28,33 +30,33 @@ function Selected(props){
         }
     }
 
-    const handleAgregarProducto = e =>{
+    const handleAgregarProducto = e => {
         e.preventDefault();
-        if(!carrito.find(t => t.nombre === producto.nombre)){
+        if (!carrito.find(t => t.nombre === producto.nombre)) {
             console.log(producto)
-            setCarrito([...carrito,{producto}])
+            setCarrito([...carrito, { producto }])
             console.log(carrito)
         }
-        if(carrito.length === 0){
-            setCarrito([...carrito,{producto}])
+        if (carrito.length === 0) {
+            setCarrito([...carrito, { producto }])
             console.log(`null: ${carrito}`)
-        }else{
+        } else {
             // setCarrito([...carrito,{producto}])
-            
+
             console.log(carrito)
             // setCarrito([...carrito,producto])
             console.log("object")
         }
     }
-    
+
     useEffect(() => {
         // console.log(carrito)
-        
+
         // setCarrito([...carrito,producto])
         // console.log(carrito)
     }, [])
 
-    
+
     return (
         <div className="container-fluid">
             <div className="container pt-5">
@@ -73,7 +75,7 @@ function Selected(props){
                     </div>
                     <div className="col-12 col-md-6 px-1 pl-sm-5">
                         <h2 className="font-weight-bold text-dark">{producto.nombre}</h2>
-                        <p className="text-muted">{`id producto: ${producto.id}`}</p>
+                        <p className="text-muted">{`id producto: ${producto.id_producto}`}</p>
                         <hr className="pt-2" />
                         <h5 className="text-dark">{producto.descripcion}</h5>
 

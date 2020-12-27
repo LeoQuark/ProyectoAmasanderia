@@ -8,21 +8,29 @@ function PanelAdmin() {
         nombre: "leo"
     })
     const [respuesta, setRespuesta] = useState(false)
+    const [file, setFile] = useState()
 
 
     const handleInputChange = (event) => {
         // console.log(event.target.name)
         // console.log(event.target.value)
+
         setDatosProductos({
             ...datosProductos,
             [event.target.name]: event.target.value
         })
+        // console.log(datosProductos)
     }
 
     const enviarDatos = (event) => {
         event.preventDefault()
         event.target.reset()
-        // console.log(JSON.stringify(datosProductos))
+        // setDatosProductos({ ...datosProductos, [file]: file })
+        // console.log(file)
+        // setDatosProductos({ ...datosProductos, file })
+        // console.log(JSON.stringify(datosProductos + file))
+        // datosProductos.append(file)
+        // console.log(datosProductos)
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -43,23 +51,24 @@ function PanelAdmin() {
 
     useEffect(() => {
         getProductos()
-    }, [respuesta,getProductos])
+    }, [respuesta, getProductos])
 
     return (
         <div className="container-fluid my-5 pt-5">
             <div className="container shadow rounded">
-                <div className="row">
-                    <p className="display-6 my-2 mx-1">Productos</p>
+                <div className="d-flex">
+                    <h1 className="font-rochester my-2 mx-2 pl-4">Productos</h1>
                 </div>
                 <div className="col-12">
                     <div className="container px-1 py-1">
                         <div className="row">
                             <div className="col-12 col-md-4">
-                                <form action="" onSubmit={enviarDatos}>
+                                <form action="" method="POST" onSubmit={enviarDatos}>
                                     <div className="my-1">
                                         <label htmlFor="inputCategoria" className="form-label">Categoría</label>
-                                        <select name="categoria" class="form-select form-select-sm" aria-label=".form-select-sm example" onChange={handleInputChange}>
+                                        <select name="categoria" class="form-control form-control-sm" aria-label=".form-select-sm example" onChange={handleInputChange}>
                                             <option selected>Selecciona la categoría del producto</option>
+                                            <option value="Oferta">Oferta</option>
                                             <option value="Amasanderia">Amasandería</option>
                                             <option value="Panaderia">Panadería</option>
                                             <option value="Empanadas">Empanadas</option>
@@ -90,7 +99,15 @@ function PanelAdmin() {
                                     </div>
                                     <div className="my-1">
                                         <label htmlFor="inputImagen" className="form-label">Imagen</label>
-                                        <input type="file" name="imagen" className="form-control form-control-sm" placeholder="hola" onChange={handleInputChange} />
+                                        <input type="file" name="imagen" className="form-control form-control-sm"
+                                            onChange={event => {
+                                                const file = event.target.files[0]
+                                                setFile(file)
+                                                // console.log(file)
+                                                // handleInputChange()
+                                            }}
+                                        // onChange={handleInputChange}
+                                        />
                                     </div>
                                     <div className="my-1 d-none">
                                         <input type="number" name="id_admin" className="form-control form-control-sm" placeholder="hola" value="1" onChange={handleInputChange} />

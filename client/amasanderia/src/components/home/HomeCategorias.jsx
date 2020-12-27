@@ -5,8 +5,8 @@ const HomeCategorias = () => {
 
     return (
         <div className="container-fluid px-0 pt-5 text-white">
-            <div className="d-flex justify-content-center bg-cafeo py-3 px-0">
-                <h3 className="my-2">Categorías destacadas</h3>
+            <div className="d-flex justify-content-center py-3 px-0">
+                <h1 className="font-rochester my-2">Categorías destacadas</h1>
             </div>
             <div className="container">
                 <div className="row row-cols-lg-3 row-cols-sm-2 row-cols-1">

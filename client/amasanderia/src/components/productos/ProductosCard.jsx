@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 const ProductosCard = (props) => {
 
     const productos = props.productos.data;
+    // console.log(productos)
 
     return (
         <>
             {
                 productos.map((producto, index) => (
-                    <Link to={`/productos/${producto.id}`} className="text-decoration-none text-dark px-2" key={productos.nombre} >
+                    <Link to={`/productos/${producto.id_producto}`} className="text-decoration-none text-dark px-2" key={index} >
                         <div className="card bg-white rounded shadow-md px-1 hover-scale-sm my-2 h-card">
                             <div className="row">
                                 <div className="col-12 col-sm-6">
@@ -17,7 +18,7 @@ const ProductosCard = (props) => {
                                         <h5 className="font-weight-bold py-1">{producto.nombre}</h5>
                                         <p className="pb-2 text-muted">{producto.descripcion}</p>
                                         <div className="d-flex">
-                                            <p className="font-weight-bold">{`$ ${producto.precio}`}</p>
+                                            <p className="font-weight-bold">$ {producto.precio}</p>
                                         </div>
                                         <div className="d-flex">
                                             <button className="btn btn-success mb-2 w-100">+ Agregar</button>

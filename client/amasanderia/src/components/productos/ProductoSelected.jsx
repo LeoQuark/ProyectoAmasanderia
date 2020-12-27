@@ -13,6 +13,7 @@ const ProductoSelected = () => {
             const res = await fetch(`http://localhost:4000/api/productos/get/${id}`)
             const datos = await res.json()
             setCargando(<Selected producto={datos} />)
+            // console.log(id)
             // console.log(datos)
         }
         getProductoById()

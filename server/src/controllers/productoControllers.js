@@ -1,11 +1,15 @@
 import Pool from './index'
+// import multer from 'multer'
 
 // status(200) = solicitud exitosa
 const createProducto = async (req, res) => {
     try {
         const { nombre, categoria, descripcion, precio, stock, imagen } = req.body;
+        // const imagen = req.file
+        // console.log("prueba")
+        // console.log(req.file)
         const consulta = await Pool.query('INSERT INTO producto (nombre,categoria,descripcion,precio,stock,imagen) VALUES ($1, $2, $3, $4, $5, $6)', [nombre, categoria, descripcion, precio, stock, imagen]);
-        console.log(consulta)
+        //console.log(consulta)
         res.json({
             message: `producto: ${nombre} creado exitosamente`,
             result: true
@@ -40,13 +44,13 @@ const getProductoById = async (req, res) => {
     try {
         const id_producto = req.params.id
         const consulta = await Pool.query('SELECT * FROM producto WHERE id_producto = $1', [id_producto])
-        // console.log(consulta.rows)
+        console.log(consulta.rows)
         res.json({
             data: consulta.rows,
             result: true
         })
     } catch (err) {
-        console.log(err)
+        console.log("slkajklsa")
         res.json({
             message: `error: ${err}`,
             result: false

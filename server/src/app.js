@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
+// import multer from 'multer'
 
 // import para las rutas
 import adminRoutes from "./routes/admin";
@@ -13,6 +14,12 @@ import mail from "./routes/mail";
 const app = express();
 
 // middlewares
+
+// inicializo multer para guardar fotos en la bd
+// app.use(multer({
+//     dest: '../../client/amasanderia/public/img/imagenesProductos'
+// }).single('imagen'));
+
 // app.use(morgan("dev"));
 // app.use(json());
 // parse application/x-www-form-urlencoded
@@ -21,12 +28,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(function (req, res, next) {
-    // res.header("Access-Control-Allow-Origin", "*");
-    // res.header(
-    //     "Access-Control-Allow-Headers",
-    //     "Origin, X-Requested-With, Content-Type, Accept",
-    //     "Access-Control-Allow-Methods","GET"
-    // );
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
