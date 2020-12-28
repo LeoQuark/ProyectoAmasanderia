@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const ProductosCard = (props) => {
 
     const productos = props.productos.data;
     // console.log(productos)
+    const [carritoLocal, setCarritoLocal] = useState([])
+
+    const carrito = (elemento) => {
+        setCarritoLocal([
+            ...carritoLocal, elemento
+        ])
+        console.log(setCarritoLocal)
+    }
 
     return (
         <>
@@ -21,7 +29,8 @@ const ProductosCard = (props) => {
                                             <p className="font-weight-bold">$ {producto.precio}</p>
                                         </div>
                                         <div className="d-flex">
-                                            <button className="btn btn-success mb-2 w-100">+ Agregar</button>
+                                            <button className="btn btn-success mb-2 w-100"
+                                            >+ Agregar</button>
                                         </div>
                                     </div>
                                 </div>

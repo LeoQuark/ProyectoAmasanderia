@@ -28,7 +28,7 @@ const ProductosHome = (props) => {
         <div className="container-fluid my-2 pt-3">
             <div className="container">
                 <div className="d-flex justify-content-start">
-                    <h4 className="font-weight-bold text-dark">{titulo}</h4>
+                    <h4 className="font-roboto font-weight-bold text-dark">{titulo}</h4>
                 </div>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                     {cargando}

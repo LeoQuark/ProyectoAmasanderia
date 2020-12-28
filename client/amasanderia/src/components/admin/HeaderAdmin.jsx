@@ -30,7 +30,7 @@ const HeaderAdmin = () => {
                         <div className="row d-flex">
                             <ul className="navbar-nav mt-3">
                                 <li className="nav-item">
-                                    <Link to="/panel-administrador" className="nav-link mx-2">
+                                    <Link className="nav-link mx-2">
                                         <p className="font-roboto rounded px-1 py-1 b-hover">Administrador</p>
                                     </Link>
                                 </li>
@@ -39,25 +39,12 @@ const HeaderAdmin = () => {
                                         <p className="font-roboto rounded px-1 py-1 b-hover">Inicio</p>
                                     </Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/productos" className="nav-link mx-2">
-                                        <p className="font-roboto rounded px-1 py-1 b-hover">Productos</p>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/carrito" className="nav-link mx-2">
-                                        <div className="d-flex b">
-                                            <i className="fas fa-shopping-bag fa-2x i-hover"></i>
-                                            <span className="badge badge-danger text-white rounded-circle ml-1 py-auto mb-4">{cantidad}</span>
-                                        </div>
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
-        </div>
+        </div >
     );
 };
 

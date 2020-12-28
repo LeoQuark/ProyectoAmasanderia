@@ -22,7 +22,7 @@ function PanelAdmin() {
         // console.log(datosProductos)
     }
 
-    const enviarDatos = (event) => {
+    const enviarDatos = async (event) => {
         event.preventDefault()
         event.target.reset()
         // setDatosProductos({ ...datosProductos, [file]: file })
@@ -36,7 +36,7 @@ function PanelAdmin() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(datosProductos)
         };
-        fetch('http://localhost:4000/api/productos/create', requestOptions)
+        await fetch('http://localhost:4000/api/productos/create', requestOptions)
             .then(response => response.json({
                 message: "añadido"
             }))

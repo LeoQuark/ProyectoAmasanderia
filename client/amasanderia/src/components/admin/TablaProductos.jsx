@@ -7,28 +7,13 @@ import BotonInfo from './BotonInfo'
 function TablaProductos(props) {
 
     const productos = props.productos.data;
-
-    // const editarDatos = (event) => {
-    //     event.preventDefault()
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify(datosProductos)
-    //     };
-    //     fetch('http://localhost:4000/api/productos/create', requestOptions)
-    //         .then(response => response.json({
-    //             message: "añadido"
-    //         }))
-    //         .then(() => setRespuesta(!respuesta))
-    // }
-
     useEffect(() => {
 
     }, [])
 
     return (
         <div className="table-responsive">
-            <table className="table table-sm table-striped table-hover">
+            <table className="table table-sm table-hover">
                 <thead className="table-dark">
                     <tr>
                         <th scope="col">#</th>

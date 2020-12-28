@@ -87,6 +87,11 @@
 
 }
 
+.bg-img {
+    background-image: url("../img/foto3.png");
+    background-size: cover;
+}
+
 .text-cafe {
     color: #402718;
 }

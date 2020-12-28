@@ -1,18 +1,65 @@
 import Pool from './index'
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
+
 
 // status(200) = solicitud exitosa
+const login = async (req, res) => {
+    try {
+        const { correo, password } = req.body
+        // buscar usuario por su correo
+        const consultaUsuario = await Pool.query('SELECT * FROM admin WHERE correo = $1', [correo])
+        const usuario = consultaUsuario.rows[0]
+        // console.log(usuario.rows[0])
+        // console.log(consultaUsuario.rows[0])
+
+        if (consultaUsuario.rows[0]) {
+            // console.log("existe")
+            const isOk = await bcrypt.compare(password, consultaUsuario.rows[0].password)
+            console.log(isOk)
+            if (isOk) {
+                console.log("leooo")
+                res.json({
+                    data: consultaUsuario.rows,
+                    status: true
+                })
+            } else {
+                res.json({
+                    status: false
+                })
+            }
+        } else {
+            res.json({
+                status: false
+            })
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({
+            message: error
+        })
+    }
+}
+
+
 const createAdmin = async (req, res) => {
     try {
         const { nombre, correo, password } = req.body;
-        const consulta = await Pool.query('INSERT INTO admin (nombre,correo,password) VALUES ($1, $2, $3)', [nombre, correo, password]);
+
+        // ENCRIPTO LA CONTRASEÑA
+        const pass = await bcrypt.hash(password, 15)
+        // CREAR EL USUARIO
+        const newUser = await Pool.query('INSERT INTO admin (nombre,correo,password) VALUES ($1, $2, $3)', [nombre, correo, pass]);
         // console.log(consulta)
         res.json({
-            message: `admin: ${nombre} creado exitosamente`
+            message: `admin: ${nombre} creado exitosamente`,
+            status: true,
         })
     } catch (err) {
         console.log(err)
         res.json({
-            message: `error: ${err}`
+            message: `error: ${err}`,
+            status: false
         })
     }
 }
@@ -80,6 +127,7 @@ const updateAdmin = async (req, res) => {
 }
 
 module.exports = {
+    login,
     getAdmin,
     createAdmin,
     getAdminById,

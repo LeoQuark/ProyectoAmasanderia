@@ -8,7 +8,7 @@ const Header = () => {
   useEffect(() => {
     let datos = localStorage.getItem("productos")
     if (datos != null) {
-      setCantidad(0)
+      setCantidad(1)
     } else {
       setCantidad(0)
     }

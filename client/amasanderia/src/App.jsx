@@ -33,16 +33,21 @@ function App() {
           <Productos />
           <Footer />
         </Route>
+        {/* <Route path="/admin/:id/panel-administrador">
+          <HeaderAdmin />
+          <PanelAdmin />
+          <Footer />
+        </Route> */}
+        <Route path="/admin/:id">
+          <HeaderAdmin />
+          <PanelAdmin />
+          <Footer />
+        </Route>
         <Route path="/admin">
           <Login />
         </Route>
         <Route path="/user">
           <HeaderAdmin />
-        </Route>
-        <Route path="/panel-administrador">
-          <HeaderAdmin />
-          <PanelAdmin />
-          <Footer />
         </Route>
         <Route path="/contacto">
           <Header />
